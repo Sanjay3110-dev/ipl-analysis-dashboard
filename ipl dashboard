@@ -1,0 +1,38 @@
+import pandas as pd 
+import numpy as np
+
+matches = pd.read_csv('/Users/apple/Downloads/archive-2/matches.csv')
+deliveries = pd.read_csv('/Users/apple/Downloads/archive-2/deliveries.csv')
+
+print("matches null:\n", matches.isnull().sum())
+print("\nmatches shape:", matches.shape)
+
+team_name_map = {
+    'Rising Pune Supergiant': 'Rising Pune Supergiants',
+    'Delhi Daredevils': 'Delhi Capitals',
+    'Deccan Chargers': 'Sunrisers Hyderabad',
+    'Kings XI Punjab': 'Punjab Kings'
+}
+matches['team1'] = matches['team1'].replace(team_name_map)
+matches['team2'] = matches['team2'].replace(team_name_map)
+matches['winner'] = matches['winner'].replace(team_name_map)
+matches['toss_winner'] = matches['toss_winner'].replace(team_name_map)
+
+matches['dates'] = pd.to_datetime(matches['date'])
+
+matches_clean = matches[matches['result'] != 'no result']
+print("\nmatches_clean shape:", matches_clean.shape)
+
+print("\ndeliveries null:\n", deliveries.isnull().sum())
+
+deliveries['player_dismissed'] = deliveries['player_dismissed'].fillna('Not out')
+deliveries['dismissal_kind'] = deliveries['dismissal_kind'].fillna('None')
+deliveries['fielder'] = deliveries['fielder'].fillna('None')
+
+deliveries['batting_team'] = deliveries['batting_team'].replace(team_name_map)
+deliveries['bowling_team'] = deliveries['bowling_team'].replace(team_name_map)
+
+matches_clean.to_csv('/Users/apple/Downloads/archive-2/matches_clean.csv', index=False)
+deliveries.to_csv('/Users/apple/Downloads/archive-2/deliveries_clean.csv', index=False)
+
+print("\nCleaned files saved successfully.")
