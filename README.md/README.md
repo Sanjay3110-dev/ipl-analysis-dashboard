@@ -18,6 +18,5 @@ Analyzed 1090+ IPL matches and 260,000+ ball-by-ball deliveries to uncover team 
 - Tableau Public
 
 - ## Dataset
-- [view dataset]
 (https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020)
 
