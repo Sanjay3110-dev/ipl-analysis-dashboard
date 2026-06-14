@@ -16,3 +16,6 @@ Analyzed 1090+ IPL matches and 260,000+ ball-by-ball deliveries to uncover team 
 - Python (Pandas, Matplotlib, Seaborn)
 - SQL (SQLite)
 - Tableau Public
+
+- ## Dataset
+IPL ball-by-ball data sourced from Kaggle (2008–2023)
