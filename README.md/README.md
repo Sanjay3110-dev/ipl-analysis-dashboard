@@ -10,7 +10,7 @@ Analyzed 1090+ IPL matches and 260,000+ ball-by-ball deliveries to uncover team 
 - YS Chahal leads wicket takers with 205 wickets
 
 ## Dashboard
-[View on Tableau Public](YOUR_TABLEAU_LINK_HERE)
+[View on Tableau Public](https://public.tableau.com/views/IPLAnalysisDashboard_17814307925220/IPLAnalysisDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## Tools Used
 - Python (Pandas, Matplotlib, Seaborn)
